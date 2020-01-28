@@ -4,8 +4,7 @@
 
 By: Jennifer Griffiths
 
-Github Username : JennGriff
-[JennGriff](https://github.com/JennGriff)
+Github Username : [JennGriff](https://github.com/JennGriff)
 
 Project summary:
 
