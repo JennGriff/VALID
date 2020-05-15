@@ -1,0 +1,98 @@
+/* 
+*   @file       
+*   @brief      
+*               
+*
+*   @author:    Jennifer Griffiths
+*   @date:      
+*
+*/
+############################# STEP 1 #############################
+$train = "train.csv";                                   # default  train  file
+$test =   "test.csv";                                   # default  test  file
+if ($# ARGV > 0){ $train = $ARGV [0];}                  # override  
+if  argumentif ($# ARGV > 0){ $test   = $ARGV [1];}     # override  if  argument
+
+# count  of all  messages
+my  $n_msgs = 0;
+
+# count  of the  spam  messages                                      
+my  $n_spam = 0;
+
+# counts  of the ham  messages                                        
+my  $n_ham = 0;
+
+# empty map , stores  counts  indexed  by  label/word  pair                                        
+my %counts;
+
+
+############################# STEP 2 #############################
+# open  the  file  $train  and  iterate  it with  file  handler  $in
+open my $in , $train  or die "$train: $!";
+while (my  $line = <$in >) {
+    chomp  $line;                           # yum  yum
+    my @fields = split "," , $line;         # split  line by  comma
+    my  $label = $fields [0];               # this is the  label: spam or ham (string)
+    my $msg    = $fields [1];               # this is the  text  message (string)
+    ######################
+    ###  ACTION  ITEM   1 ###
+    # update  the ham , spam , and  total  message  counts
+    ######################
+    
+    # loop  over  each (lower -case) word
+    foreach  $word (split  /\s+/, lc($msg)) {
+        ######################
+        ###  ACTION  ITEM   2 ###
+        # update  count  for  that  word/label  pair
+        ######################
+    }
+    
+}
+# close  the  file  handler
+close  $in;  
+
+############################# STEP 3 #############################
+
+######################
+###  ACTION  ITEM   3 ###
+# fill in the  missing  lines  below
+######################
+use  List::Util ’sum’;      # needed  library  for sum  function  below
+
+#   Count  the  number  of  unique  words  for  ‘‘ham ’’
+my  $n_unq_words_ham = keys %{ $counts{"ham"}};
+#   ACTION:   find  count of  unique  spam  words
+
+#   Count  the sum of the  counts  of all  ham  words
+my  $n_words_ham = sum  values  %{ $counts{"ham"}};
+#   ACTION:   find  sum of  counts  of all  spam  words
+
+#   ACTION:   find  total  counts  of spam  words  plus  ham words
+
+############################# STEP 4 #############################
+
+######################
+###  ACTION  ITEM   4 ###
+# complete  the  lines  below
+######################
+# ACTION: replace  the ???  with  the  calculation
+my  $prior_spam = log (   ??? )
+my  $prior_ham = log (   ??? )
+
+  
+############################# STEP 5 #############################
+  
+######################
+###  ACTION  ITEM   5 ###
+# Predict  the  messages  in the  test  file
+######################
+# Loop  through  the  test  file
+# For  each  message , predict  spam or ham
+# Calculate  overall  accura  
+  
+  
+  
+  
+  
+  
+                           

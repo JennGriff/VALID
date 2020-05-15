@@ -1,0 +1,24 @@
+<h1>Absence Due to Scheduled Event</h1>
+
+<form action="{% url 'scheduled' %}" method ="post">
+    {% csrf_token %}
+    <label for="startDate">Start date </label>
+    <input id ="startDate" type="date" name="startDate">
+    <label for="endDate">End date </label>
+    <input id ="endDate" type="date" name="endDate">
+    <p></p>
+    <label for="reason">Reason for absence</label>
+    <select id ="reason" name="reason">
+        <option value="medicalApt"> Medical Appointment </option> 
+        <option value="otherApt"> Other Appointment </option> 
+        <option value="family"> Family Emergency </option> 
+        <option value="school"> School Related Event  </option> 
+        <option value="work"> Work Related Event </option> 
+        <option value="other"> Other </option> 
+    </select>
+    <P></P>
+    <label for="">Please add a short description: </label>
+    <input id="detail" type="text" name="detail">
+    <p></p>
+    <input type="submit" value="SUBMIT">
+</form>

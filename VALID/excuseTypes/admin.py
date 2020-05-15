@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import EmergencyReasons, Emergency, Scheduled, ScheduledReasons
 
-# Register your models here.
+admin.site.register(EmergencyReasons)
+admin.site.register(Emergency)
+admin.site.register(ScheduledReasons)
+admin.site.register(Scheduled)

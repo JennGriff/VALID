@@ -1,4 +1,50 @@
-<h1>Excuse Me</h1>
+{% extends 'homeBase.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h2>
+    Fill out the appropriate form to validate absences: 
+</h2>
+<h4>
 <a href="{% url 'emergency' %}">Sudden Illness/Emergency</a>
 <p></p>
 <a href="{% url 'scheduled' %}">Scheduled Absence</a>
+<br></br>
+</h4>
+<h6><em>
+    Life Happens - And we want to make the appropriate accommodations 
+    to support your education!
+</em></h6>
+<br></br>
+<center>
+<h5><b>Medical or Mental Health Issues?</b></h5>
+<h4><mark>Visit the WellCat Health Center!</mark></h4>
+<small>*Paid for by YOUR student fees</small>
+</center>
+<br>
+<h6>
+    <b>Onsite Services Include:</b>
+    <ul>
+        <li>Medical Visits</li>
+        <li>Mental Health Care</li>
+        <li>Lab Testing</li>
+        <li>Immunizations</li>
+        <li>Pharmacy</li>
+        <li>Gender Affirming Care</li>
+        <li>X-Rays</li>
+    </ul>
+</h6>
+
+<h6>
+    Located on campus across Whitney Hall : 
+    <br>
+    <b>601 Warner Street</b> 
+    </br><br>
+    For questions or appointments call:
+    <br>
+    <a href="tel:5308985241">(530)898-5241 </a>
+    <br></br>
+    For more information visit: 
+    <a href="https://www.csuchico.edu/healthcenter/">https://www.csuchico.edu/healthcenter/</a>
+</h6>
+
+{% endblock %}

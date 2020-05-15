@@ -1,2 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
 <h1>Absence Due to Scheduled Event</h1>
+<h2>{{ note }}</h2>
 
+<form enctype="multipart/form-data" action="{% url 'scheduled' %}" method = "post">
+    {% csrf_token %}
+    {{ scheduledform|crispy}}
+    <small>
+        *Supporting documentation includes but is not limited to: 
+        <p><i>Official Documents, Authoritative letters from employer, physician, professor, ect. </i></p>
+    </small>
+    <input type="submit" value="SUBMIT">
+</form>
+{% endblock %}
